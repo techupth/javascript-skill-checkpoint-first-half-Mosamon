@@ -2,6 +2,12 @@
 
 function filterInStockProducts(products) {
   // เริ่มเขียนโค้ดตรงนี้
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].quantity === 0) {
+      products.splice(i, 1);
+    }
+  }
+  return products;
 }
 
 // ตัวอย่างการใช้งาน
